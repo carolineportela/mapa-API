@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+path {
+    /* cor */
+    fill: #eccea7;
+
+    /* borda */
+    stroke: #fff;
+
+    /* largura da borda */
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: 2s;
+}
+
+path:hover {
+    fill: #FA9E27;
+}
+
+.map-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.card {
+    width: 400px;
+    height: 417px;
+    background-color: #F5E7D3;
+    padding: 15px;
+}
+
+.container-info {
+    display: grid;
+    grid-template-areas: "bolinha"
+        "dados-estado";
+    grid-template-columns: 1fr 2fr;
+
+}
+
+.dados-estados {
+    padding-top: 9%;
+   
+}
+
+.estado {
+    font-size: 2.5rem;
+    color: #FA9E27;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.uf {
+    color: #fff;
+}
+
+.bolinha {
+    border-radius: 50%;
+    background-color: #FA9E27;
+    border: 5px solid #fff;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    font-size: 3rem;
+    align-items: center;
+    padding-left: 1.3rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+
+}
+.cidades{
+    
+}
+
+@media (max-width:960px) {
+    .map-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
