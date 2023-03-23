@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./app.js" defer></script>
+    <script src="./app.js" defer type="module"></script>
+   
     <link rel="stylesheet" href="./style.css">
+    
     <title>Estados</title>
 </head>
 
@@ -104,24 +106,26 @@
         <div class="card" id="card">
             <div class="container-info" id="info">
                 <div class="bolinha" id="bolinha">
-                    <div class="uf">AC</div>
+                    <div class="uf" id="uf"></div>
                 </div>
                 <div class="dados-estados">
-                    <div class="estado">
-                        ACRE
+                    <div class="estado" id="estado">
+                       
                     </div>
 
-                    <div class="capital">
-                        Capital : Rio Branco
+                    <div class="capital" id="capital">
+                        
                     </div>
 
-                    <div class="regiao">
-                        Região : Norte
+                    <div class="regiao" id="regiao">
+                        
                     </div>
                 </div>
-
+        
                 <div class="cidades">
-                    Cidade
+                    <h4>Cidades</h4>
+                    <ul id="lista-cidades"></ul>
+
                 </div>
 
 

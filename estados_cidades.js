@@ -1,21 +1,23 @@
 'use strict'
 
-export const getDadosEstados = async () => {
-
-    const url = `http://localhost:8080/estado/sigla/${sigla}`
-
-    // o fetch faz a requisicoa pela url
+export const getDadosEstado = async (sigla) => {
+    const url = `http://localhost:8080/estado/${sigla}`
     const response = await fetch(url)
-
-    //await é o que aguarda a promessa,ele aguarda pq nem toda promessa é comprida.
     const estado = await response.json()
 
-    return{
-        estado:estado.sigla,
-        descricao: estado.estado,
-        capital : estado,capital,
+    return {
+        uf: estado.uf,
+        descricao: estado.descricao,
+        capital: estado.capital,
         regiao: estado.regiao
     }
+}
+export const getCidades = async (sigla) => {
+    const url = `http://localhost:8080/cidades/${sigla}`
+    const response = await fetch(url)
+    const data = await response.json()
 
-
+    return {
+        cidades: data.cidades
+    }
 }
